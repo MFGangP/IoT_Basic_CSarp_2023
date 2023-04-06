@@ -22,4 +22,7 @@
 - WinApp
   - WinForms 컨트롤
   - ListView / DataGrid 추가 학습요
+
+3일차 WinForms 학습 결과
+
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day03_WinForms.png" width="640" />
