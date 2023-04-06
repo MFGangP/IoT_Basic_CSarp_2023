@@ -8,8 +8,11 @@ namespace CS16_inheritance
 {
     class Base // 기반 또는 부모 클래스
     {
+        // 자식 클래스에서 상속받을려면 private는 안써야함.
         protected string Name;
+        // 만약에 상속을 할거면 protected로 변경 해줘야된다.
         private string Color;
+        // 상속이 필요 없으면 private
         public int Age;
 
         public Base(string Name, string Color, int Age)
@@ -42,6 +45,11 @@ namespace CS16_inheritance
         {
             Console.WriteLine("{0}.ChildMethod()", Name);
         }
+        // 접근 불가
+        //public void GetColorChild()
+        //{
+        //    Console.WriteLine(Color);
+        //}
 
     }
 
@@ -55,7 +63,7 @@ namespace CS16_inheritance
             Child c = new Child("NameC", "Black", 2);
             c.BaseMethod();
             c.ChildMethod();
-            c.GetColor();
+            c.GetColor(); // Base.GetColor Black... c에서 Color에 접근 불가!
         }
     }
 }
