@@ -37,3 +37,10 @@
   - WinForms 예제 실습 
     - File Copy App
     - Login App
+
+## 5일차
+- C# 기본
+
+- Win App
+  - WinForms 디자인 오류시 해결 방법
+  - Window 탐색기 만들기
