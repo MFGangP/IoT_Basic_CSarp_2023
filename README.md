@@ -26,3 +26,11 @@
 3일차 WinForms 학습 결과
 
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day03_WinForms.png" width="640" />
+
+## 4일차
+- C# 기본
+  - 클래스 상속 계속
+  
+- Win App
+  - WinForms 컨트롤 마무리
+  - WinForms 예제 실
