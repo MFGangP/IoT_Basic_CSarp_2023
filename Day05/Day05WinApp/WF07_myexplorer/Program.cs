@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WF06_listview
+namespace WF07_myexplorer
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace WF06_listview
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            Application.Run(new FrmExplorer());
         }
     }
 }
