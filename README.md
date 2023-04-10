@@ -48,7 +48,6 @@
   - Window 탐색기 만들기
   
 5일차 탐색기 만드는 중..
-<img src="https://github.com/MFGangP/IoT_Basic_CSarp_2023/blob/main/image/2023.04.10.png?raw=true
-" width="640" />
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day05_WinForms.png" width="640" />
 
  
