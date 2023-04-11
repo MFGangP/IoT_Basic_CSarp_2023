@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF08_dbhandling", "WF08_dbhandling\WF08_dbhandling.csproj", "{C0BFB8BD-3AB9-43D4-B836-943C7870B0C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF07_myexplorer", "WF07_myexplorer\WF07_myexplorer.csproj", "{7D02C8BA-EBEC-406F-88F3-0354528557AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0BFB8BD-3AB9-43D4-B836-943C7870B0C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BFB8BD-3AB9-43D4-B836-943C7870B0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BFB8BD-3AB9-43D4-B836-943C7870B0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BFB8BD-3AB9-43D4-B836-943C7870B0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D02C8BA-EBEC-406F-88F3-0354528557AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D02C8BA-EBEC-406F-88F3-0354528557AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D02C8BA-EBEC-406F-88F3-0354528557AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D02C8BA-EBEC-406F-88F3-0354528557AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB497FD1-C149-442B-B0C0-DB8F0765C085}
+	EndGlobalSection
+EndGlobal
