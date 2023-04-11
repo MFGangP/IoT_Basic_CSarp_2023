@@ -66,6 +66,8 @@
       - 보호된 운영체제 폴더 숨기기
       - 리스트뷰 폴더 더블클릭시 하위폴더 표시
   - DB 핸들링
+<img src="https://github.com/MFGangP/IoT_Basic_CSarp_2023/blob/main/image/Day06_WinForm.png?raw=true" width="640" />
+
 
 ## 7일차
 - C# 기본
