@@ -42,6 +42,7 @@
 - C# 기본
   - 인터페이스, 추상클래스
   - 프로퍼티
+  - 배열, 컬렉션
 
 - Win App
   - WinForms 디자인 오류시 해결 방법
@@ -51,4 +52,14 @@
 
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day05_WinForms.png" width="640" />
 
- 
+## 6일차
+- C# 기본
+  - 컬렉션
+  - 일반화 프로그래밍
+  - 예외 처리
+  
+- Win App
+  - 탐색기 마무리
+  - DB 핸들링
+  - BookRentalShop DB 사용 WinForms 앱개발
+  - 실습 예제
