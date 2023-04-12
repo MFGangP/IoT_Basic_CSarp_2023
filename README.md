@@ -80,5 +80,14 @@
   
 - Win App
   - DB 핸들링
+  - SDI / MDI
+
+## 8일차
+- C# 기본
+  - 
+  -
+  -
+  
+- Win App
   - BookRentalShop DB 사용 WinForms 앱개발
   - 실습 예제
