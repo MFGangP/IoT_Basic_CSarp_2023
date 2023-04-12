@@ -8,13 +8,13 @@ namespace CS28_event
 {
     // 이벤트를 사용하려면
     // 1. 대리자를 생성
-    // EventHandler라는 이름을 가진 대리자를 만들껀데 매개 변수로 string을 받을거야
+    // EventHandler라는 이름을 가진 대리자를 만들껀데 매개 변수로 string 타입을 받을거야
     delegate void EventHandler(string message);
 
     class CustomNotifier 
     {
         // 2. 대리자를 쓰고 싶은 곳에 이벤트를 준비(대리자를 사용한)
-        // 하얀색 EventHandler 델리게이트의 이름 - 이벤트 이름
+        // 하얀색 = EventHandler 델리게이트의 이름 - 이벤트 이름
         public event EventHandler SomethingChanged;
         // DoSomething이라는 멤버함수 내에 있는 특정 조건을 만족 할 때 이벤트가 발생한다.
         public void DoSomething(int number)
@@ -49,6 +49,7 @@ namespace CS28_event
             
             for (int i = 0; i <= 30; i++)
             {
+                // 클래스 내 함수를 불러오면 이벤트 조건에 맞는 상황이 튀어나옴.
                 notifier.DoSomething(i);
             }
 
