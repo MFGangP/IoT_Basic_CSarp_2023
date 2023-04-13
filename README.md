@@ -86,11 +86,12 @@
 - C# 기본
   - 파일 다루기(핸들링)
 
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day08_WinForm.png" width="640" />
+  
 - Win App
   - BookRentalShop DB 사용 WinForms 앱개발
   - 실습 예제
-  
-  <img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day08_WinForm.png" width="640" />
+
 
 ## 9일차
 - C# 기본
