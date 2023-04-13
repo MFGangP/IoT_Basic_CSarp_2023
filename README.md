@@ -66,6 +66,7 @@
       - 보호된 운영체제 폴더 숨기기
       - 리스트뷰 폴더 더블클릭시 하위폴더 표시
   - DB 핸들링
+  
 <img src="https://github.com/MFGangP/IoT_Basic_CSarp_2023/blob/main/image/Day06_WinForm.png?raw=true" width="640" />
 
 
@@ -74,8 +75,7 @@
 - C# 기본
   - 대리자, 이벤트
   - 람다식
-  - 애트리뷰트
-  - 파일 핸들링 
+  - 애트리뷰트 
   - 더 공부해야할 내용 (LINQ, 리플렉션, dynamic)
   
 - Win App
@@ -84,10 +84,12 @@
 
 ## 8일차
 - C# 기본
-  - 
-  -
-  -
+  - 파일 다루기(핸들링)
+  - 스레드 / 태스크(동기/비동기) 
+  - 가비지 컬렉션
   
 - Win App
   - BookRentalShop DB 사용 WinForms 앱개발
   - 실습 예제
+  
+  ## 9일차
