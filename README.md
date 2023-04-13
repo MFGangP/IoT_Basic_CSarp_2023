@@ -85,11 +85,18 @@
 ## 8일차
 - C# 기본
   - 파일 다루기(핸들링)
-  - 스레드 / 태스크(동기/비동기) 
-  - 가비지 컬렉션
-  
+
 - Win App
   - BookRentalShop DB 사용 WinForms 앱개발
   - 실습 예제
   
-  ## 9일차
+  <img src="  https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day08_WinForm.png" width="640" />
+
+## 9일차
+- C# 기본
+  - 스레드 / 태스크(동기/비동기) 
+  - 가비지 컬렉션
+
+- Win App
+  - BookRentalShop DB 사용 WinForms 앱개발
+  - 실습 예제
