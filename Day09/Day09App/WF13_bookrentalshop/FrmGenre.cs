@@ -14,19 +14,50 @@ namespace WF13_bookrentalshop
 {
     public partial class FrmGenre : Form
     {
+        #region < 멤버 변수 >
         bool isNew = false; // false(업데이트) / true(INSERT)
+        #endregion
+
+        #region < 생성자 >
         public FrmGenre()
         {
             InitializeComponent();
         }
+        #endregion
 
-        private void FrmGenre_Load(object sender, EventArgs e)
-        {
-            isNew = true; // 신규부터 시작
-            // DB divtbl 데이터를 조회 한 다음 DgvResult 그리드뷰에 나타냄
-            RefreshData();
+        #region < 커스텀 메서드 >
+        private bool CheckValidation()
+        {   
+            // 입력 검증 - 나중에 많은 일을 해야한다.
+            var result = true;
+            var errorMsg = string.Empty;
+
+            if (string.IsNullOrEmpty(TxtDivision.Text))
+            {
+                // 입력검증 (Validation Check)
+                result = false;
+                errorMsg += "● 장르 코드를 입력하세요\r\n";
+            }
+
+            if (string.IsNullOrEmpty(TxtNames.Text))
+            {
+                // 입력검증 (Validation Check)
+                result = false;
+                errorMsg += "● 장르명을 입력하세요\r\n";
+            }
+
+            if (result == false)
+            {
+                // 입력검증 (Validation Check)
+                MessageBox.Show(errorMsg, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return result;
+            }
+
+            else
+            {
+              return result;
+            }
         }
-
         private void RefreshData()
         {
             try
@@ -57,12 +88,6 @@ namespace WF13_bookrentalshop
                 MessageBox.Show($"비정상적 오류 {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void BtnNew_Click(object sender, EventArgs e)
-        {
-            ClearInputs();
-        }
-
         private void ClearInputs()
         {
             TxtDivision.Text = TxtNames.Text = string.Empty;
@@ -70,52 +95,9 @@ namespace WF13_bookrentalshop
             TxtDivision.Focus();
             isNew = true; // 신규
         }
-
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-            if (CheckValidation() != true) return;
-
-            SaveData(); // 데이터 저장, 수정
-            RefreshData(); // 데이터 재조회
-            ClearInputs(); // 입력창 클리어
-        }
-
-        // 입력 검증 - 나중에 많은 일을 해야한다.
-        private bool CheckValidation()
-        {
-            var result = true;
-            var errorMsg = string.Empty;
-
-            if (string.IsNullOrEmpty(TxtDivision.Text))
-            {
-                // 입력검증 (Validation Check)
-                result = false;
-                errorMsg += "● 장르 코드를 입력하세요\r\n";
-            }
-
-            if (string.IsNullOrEmpty(TxtNames.Text))
-            {
-                // 입력검증 (Validation Check)
-                result = false;
-                errorMsg += "● 장르명을 입력하세요\r\n";
-            }
-
-            if (result == false)
-            {
-                // 입력검증 (Validation Check)
-                MessageBox.Show(errorMsg, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return result;
-            }
-
-            else
-            {
-              return result;
-            }
-        }
-
-        // isNew = true INSERT / false UPDATE
         private void SaveData()
         {
+            // isNew = true INSERT / false UPDATE
             // INSERT부터 시작
             try
             {
@@ -169,18 +151,8 @@ namespace WF13_bookrentalshop
                 throw;
             }
         }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
+        private void DeleteData()
         {
-            if (isNew == true) // 신규 일 때는 삭제 누르면 안된다.
-            {
-                MessageBox.Show($"삭제 할 데이터를 선택하세요.", "저장", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // 삭제 여부를 물을 때 아니요를 누르면 삭제 진행 취소
-            if (MessageBox.Show(this, "삭제하시겠습니까?", "삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
-            
-            // SaveData()에 있는 로직 복사 -> 수정
             // Yes를 누르면 게속 진행
             try
             {
@@ -220,15 +192,48 @@ namespace WF13_bookrentalshop
             {
                 MessageBox.Show($"비정상적 오류 {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        #endregion
+
+        #region < 이벤트 핸들러 >
+        private void FrmGenre_Load(object sender, EventArgs e)
+        {
+            isNew = true; // 신규부터 시작
+            // DB divtbl 데이터를 조회 한 다음 DgvResult 그리드뷰에 나타냄
+            RefreshData();
+        }
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            ClearInputs();
+        }
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            if (CheckValidation() != true) return;
+
+            SaveData(); // 데이터 저장, 수정
+            RefreshData(); // 데이터 재조회
+            ClearInputs(); // 입력창 클리어
+        }
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (isNew == true) // 신규 일 때는 삭제 누르면 안된다.
+            {
+                MessageBox.Show($"삭제 할 데이터를 선택하세요.", "저장", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // 삭제 여부를 물을 때 아니요를 누르면 삭제 진행 취소
+            if (MessageBox.Show(this, "삭제하시겠습니까?", "삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
+
+            // SaveData()에 있는 로직 복사 -> 수정
+            DeleteData();
             RefreshData();
             ClearInputs();
         }
-
-        // sender는 버튼 클릭 그 자체, args (e)를 더 많이 씀
-        // 그리드 뷰 클릭하면 발생하는 이벤트
         private void DgvResult_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > -1) // 아무것도 선택 안했을 때 -1
+            // sender는 버튼 클릭 그 자체, args (e)를 더 많이 씀
+            // 그리드 뷰 클릭하면 발생하는 이벤트
+            if (e.RowIndex > -1) // 아무것도 선택 안했을 때 -1
             {
                 // 모든 인덱스는 0부터 시작
                 var selData = DgvResult.Rows[e.RowIndex];
@@ -246,5 +251,6 @@ namespace WF13_bookrentalshop
                 isNew = false; // 수정
             }
         }
+        #endregion
     }
 }
