@@ -84,13 +84,16 @@
 
 ## 8일차
 - C# 기본
-  - 파일 다루기(핸들링)
+  - 파일 핸들링
+  - WinForm(파일 핸들링)
 
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day08_WinForm.png" width="640" />
   
 - Win App
   - BookRentalShop DB 사용 WinForms 앱개발
-  - 실습 예제
+    - MDI 방식
+    - MySQL.Data Lib DB연동
+  - 간단 메모장
 
 
 ## 9일차
@@ -100,4 +103,6 @@
 
 - Win App
   - BookRentalShop DB 사용 WinForms 앱개발
+    - MDI 방식
+    - MySQL 연동
   - 실습 예제
