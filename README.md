@@ -83,6 +83,7 @@
   - SDI / MDI
 
 ## 8일차
+
 - C# 기본
   - 파일 핸들링
   - WinForm(파일 핸들링)
@@ -93,10 +94,12 @@
   - BookRentalShop DB 사용 WinForms 앱개발
     - MDI 방식
     - MySQL.Data Lib DB연동
+	
   - 간단 메모장
 
 
 ## 9일차
+
 - C# 기본
   - 스레드 / 태스크(동기/비동기) 
   - 가비지 컬렉션
@@ -105,4 +108,8 @@
   - BookRentalShop DB 사용 WinForms 앱개발
     - MDI 방식
     - MySQL 연동
-  - 실습 예제
+
+## 10일차
+
+- WinApp
+	- BookRentalShop DB 사용 WinForms 앱개발 계속

@@ -64,7 +64,6 @@ namespace WF13_bookrentalshop
 
             try
             {
-                string connectionString = "Server=localhost;Port=3306;Database=Bookrentalshop;Uid=root;Pwd=12345;";
                 // DB처리
                 /*
                 MySqlConnection conn = new MySqlConnection("");
@@ -72,7 +71,10 @@ namespace WF13_bookrentalshop
                 conn.Close();
                 */
                 // using 문 쓰면 Close 안해도 알아서 닫아줌.
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
+
+                // 따로 만들면 된다.
+                // string connectionString = "Server=localhost;Port=3306;Database=Bookrentalshop;Uid=root;Pwd=12345;";
+                using (MySqlConnection conn = new MySqlConnection(Helpers.Commons.ConnString))
                 {
                     conn.Open();
 
