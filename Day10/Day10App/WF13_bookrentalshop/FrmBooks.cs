@@ -103,7 +103,6 @@ namespace WF13_bookrentalshop
                     DgvResult.Columns[5].Width = 78;
                     DgvResult.Columns[7].Width = 78;
 
-
                 }
             }
             catch (Exception ex)
