@@ -112,4 +112,6 @@
 ## 10일차
 
 - WinApp
-	- BookRentalShop DB 사용 WinForms 앱개발 계속
+	- BookRentalShop DB 사용 WinForms 앱 개발 계속
+
+- 코딩테스트
