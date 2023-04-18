@@ -116,7 +116,7 @@
 
 책 대여점 프로그램
 
-src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day10_WinForm.png" width="640" />
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day10_WinForm.png" width="640" />
   
 
 - 코딩테스트
