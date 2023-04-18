@@ -112,6 +112,11 @@
 ## 10일차
 
 - WinApp
-	- BookRentalShop DB 사용 WinForms 앱 개발 계속
+	- BookRentalShop DB 사용 WinForms 앱 마무리
+
+책 대여점 프로그램
+
+src="https://raw.githubusercontent.com/MFGangP/IoT_Basic_CSarp_2023/main/image/Day10_WinForm.png" width="640" />
+  
 
 - 코딩테스트
