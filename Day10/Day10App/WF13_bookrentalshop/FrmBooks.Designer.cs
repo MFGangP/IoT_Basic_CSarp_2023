@@ -32,6 +32,16 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DgvResult = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NudPrice = new System.Windows.Forms.NumericUpDown();
+            this.DtpReleaseDate = new System.Windows.Forms.DateTimePicker();
+            this.CboDivision = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtISBN = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtNames = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnNew = new System.Windows.Forms.Button();
@@ -39,16 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBookIdx = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtNames = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtISBN = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.CboDivision = new System.Windows.Forms.ComboBox();
-            this.DtpReleaseDate = new System.Windows.Forms.DateTimePicker();
-            this.NudPrice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,6 +91,7 @@
             this.DgvResult.Size = new System.Drawing.Size(275, 337);
             this.DgvResult.TabIndex = 0;
             this.DgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
+            this.DgvResult.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvResult_DataBindingComplete);
             // 
             // groupBox1
             // 
@@ -120,6 +121,103 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "책 정보 입력";
+            // 
+            // NudPrice
+            // 
+            this.NudPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NudPrice.Location = new System.Drawing.Point(67, 195);
+            this.NudPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.NudPrice.Name = "NudPrice";
+            this.NudPrice.Size = new System.Drawing.Size(193, 21);
+            this.NudPrice.TabIndex = 7;
+            this.NudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // DtpReleaseDate
+            // 
+            this.DtpReleaseDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DtpReleaseDate.Location = new System.Drawing.Point(67, 140);
+            this.DtpReleaseDate.Name = "DtpReleaseDate";
+            this.DtpReleaseDate.Size = new System.Drawing.Size(193, 21);
+            this.DtpReleaseDate.TabIndex = 5;
+            // 
+            // CboDivision
+            // 
+            this.CboDivision.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CboDivision.FormattingEnabled = true;
+            this.CboDivision.Location = new System.Drawing.Point(67, 86);
+            this.CboDivision.Name = "CboDivision";
+            this.CboDivision.Size = new System.Drawing.Size(193, 22);
+            this.CboDivision.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 14);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "책가격";
+            // 
+            // TxtISBN
+            // 
+            this.TxtISBN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtISBN.Location = new System.Drawing.Point(66, 167);
+            this.TxtISBN.Name = "TxtISBN";
+            this.TxtISBN.Size = new System.Drawing.Size(193, 21);
+            this.TxtISBN.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 170);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 14);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "ISBN";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 143);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 14);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "출판일자";
+            // 
+            // TxtNames
+            // 
+            this.TxtNames.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtNames.Location = new System.Drawing.Point(67, 113);
+            this.TxtNames.Name = "TxtNames";
+            this.TxtNames.Size = new System.Drawing.Size(193, 21);
+            this.TxtNames.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 14);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "책제목";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 14);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "책장르";
             // 
             // BtnDelete
             // 
@@ -176,8 +274,10 @@
             // 
             this.TxtBookIdx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtBookIdx.BackColor = System.Drawing.Color.Gainsboro;
             this.TxtBookIdx.Location = new System.Drawing.Point(67, 32);
             this.TxtBookIdx.Name = "TxtBookIdx";
+            this.TxtBookIdx.ReadOnly = true;
             this.TxtBookIdx.Size = new System.Drawing.Size(193, 21);
             this.TxtBookIdx.TabIndex = 1;
             // 
@@ -189,103 +289,6 @@
             this.label1.Size = new System.Drawing.Size(40, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "책번호";
-            // 
-            // TxtNames
-            // 
-            this.TxtNames.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtNames.Location = new System.Drawing.Point(67, 113);
-            this.TxtNames.Name = "TxtNames";
-            this.TxtNames.Size = new System.Drawing.Size(193, 21);
-            this.TxtNames.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 14);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "책제목";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 14);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "책장르";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 14);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "책가격";
-            // 
-            // TxtISBN
-            // 
-            this.TxtISBN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtISBN.Location = new System.Drawing.Point(66, 167);
-            this.TxtISBN.Name = "TxtISBN";
-            this.TxtISBN.Size = new System.Drawing.Size(193, 21);
-            this.TxtISBN.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 170);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 14);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "ISBN";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 143);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 14);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "출판일자";
-            // 
-            // CboDivision
-            // 
-            this.CboDivision.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CboDivision.FormattingEnabled = true;
-            this.CboDivision.Location = new System.Drawing.Point(67, 86);
-            this.CboDivision.Name = "CboDivision";
-            this.CboDivision.Size = new System.Drawing.Size(193, 22);
-            this.CboDivision.TabIndex = 3;
-            // 
-            // DtpReleaseDate
-            // 
-            this.DtpReleaseDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtpReleaseDate.Location = new System.Drawing.Point(67, 140);
-            this.DtpReleaseDate.Name = "DtpReleaseDate";
-            this.DtpReleaseDate.Size = new System.Drawing.Size(193, 21);
-            this.DtpReleaseDate.TabIndex = 5;
-            // 
-            // NudPrice
-            // 
-            this.NudPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NudPrice.Location = new System.Drawing.Point(67, 195);
-            this.NudPrice.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.NudPrice.Name = "NudPrice";
-            this.NudPrice.Size = new System.Drawing.Size(193, 21);
-            this.NudPrice.TabIndex = 7;
-            this.NudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FrmBooks
             // 
